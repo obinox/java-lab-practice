@@ -1,0 +1,40 @@
+package jpt;
+
+import java.util.Scanner;
+
+public class SimpleCalculator {
+	public static void main(String[] args) {
+		Scanner scn = new Scanner(System.in);
+		
+		String s = scn.nextLine();
+		
+		System.out.println(s.indexOf("+"));
+//		try{
+//			
+//		}catch(AddZeroException e1) {
+//			
+//		}catch(SubtractZeroException e2) {
+//			
+//		}catch(OutOfRangeException e3) {
+//			
+//		}
+		
+		scn.close();
+	}
+}
+
+class AddZeroException extends Exception{
+	public AddZeroException() {
+		
+	}
+}
+class SubtractZeroException extends Exception{
+	public SubtractZeroException() {
+		
+	}
+}
+class OutOfRangeException extends Exception{
+	public OutOfRangeException() {
+		
+	}
+}

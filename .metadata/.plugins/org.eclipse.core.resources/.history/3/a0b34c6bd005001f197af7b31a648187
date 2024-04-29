@@ -1,0 +1,94 @@
+package jpt;
+
+import java.util.Scanner;
+
+public class Battleship {
+	public static void main(String[] args) {
+		Scanner scn = new Scanner(System.in);
+		int mode;
+		try {
+			Methods.bombs(scn.nextInt());
+			mode = Methods.modes(scn.nextLine());
+		} catch(BombInputException e) {
+			e.printStackTrace();
+		} catch(ModeInputException e) {
+			e.printStackTrace();
+		} finally {
+			scn.close();
+		}
+		scn.close();
+		
+	}
+	
+}
+
+class Methods{
+	public static void bombs(int s) throws BombInputException{
+		if (!(s>0)) {
+			throw new BombInputException();
+		}
+	}
+	public static int modes(String s) throws ModeInputException{
+		switch(s) {
+			case "r","R":
+				return 1;
+			case "d","D":
+				return 2;
+			default:
+				throw new ModeInputException();
+		}
+	}
+}
+
+class BombInputException extends Exception {
+	public BombInputException() {
+		
+	}
+	public BombInputException(String message){
+		super(message);
+	}
+	
+}
+
+class ModeInputException extends Exception {
+	
+}
+
+abstract class ship {
+	int size=0;
+	String type="ship";
+	boolean hits=false;
+	public void Hit() {
+		this.hits = true;
+	}
+}
+class AircraftCarrier extends ship{
+	public AircraftCarrier() {
+		this.size = 6;
+		this.type = "carrier";
+	}
+}
+class BattleShip extends ship{
+	public BattleShip() {
+		this.size = 6;
+		this.type = "battleship";
+	}
+}
+class Submarine extends ship{
+	public Submarine() {
+		this.size = 6;
+		this.type = "submarine";
+	}
+}
+class Destroyer extends ship{
+	public Destroyer() {
+		this.size = 6;
+		this.type = "destroyer";
+	}
+}
+class PatrolBoat extends ship{
+	public PatrolBoat() {
+		this.size = 6;
+		this.type = "patrolboat";
+	}
+}

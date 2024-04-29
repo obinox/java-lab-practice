@@ -1,0 +1,53 @@
+package jpt;
+
+import java.util.Scanner;
+
+public class SimpleCalculator {
+	public static void main(String[] args) {
+		Scanner scn = new Scanner(System.in);
+		
+		String s = scn.nextLine();
+		int op = 0;
+		int result = 0;
+		String ss[] = {"",""}; 
+		if (s.indexOf("+")!=-1) {
+			op = 1;
+			ss = s.split("+");
+		} else if (s.indexOf("-")!=-1) {
+			op = -1;
+			ss = s.split("-");
+		} else {
+			op = 0;
+		}
+		result = Integer.valueOf(ss[0]) + op*Integer.valueOf(ss[1]);
+		
+		System.out.println(s.indexOf("+"));
+//		try{
+//			
+//		}catch(AddZeroException e1) {
+//			
+//		}catch(SubtractZeroException e2) {
+//			
+//		}catch(OutOfRangeException e3) {
+//			
+//		}
+		
+		scn.close();
+	}
+}
+
+class AddZeroException extends Exception{
+	public AddZeroException() {
+		
+	}
+}
+class SubtractZeroException extends Exception{
+	public SubtractZeroException() {
+		
+	}
+}
+class OutOfRangeException extends Exception{
+	public OutOfRangeException() {
+		
+	}
+}

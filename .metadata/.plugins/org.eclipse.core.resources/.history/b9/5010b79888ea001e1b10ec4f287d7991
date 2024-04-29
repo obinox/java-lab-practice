@@ -1,0 +1,13 @@
+package jpt;
+
+class Book{
+	public Boolean Borrowed;
+	public Boolean Returned;
+}
+
+public class Library {
+	public void main(String[] args) {
+		
+	}
+}
+

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename local variable &apos;a&apos; in &apos;jpt.Lab_2024311939.Bin2Hex(...)&apos; to &apos;ch&apos;&#x0D;&#x0A;- Original project: &apos;jpt&apos;&#x0D;&#x0A;- Original element: &apos;jpt.Lab_2024311939.Bin2Hex(ArrayList&lt;Integer&gt;).a&apos;&#x0D;&#x0A;- Renamed element: &apos;a&apos;&#x0D;&#x0A;- Update references to refactored element" description="Rename local variable &apos;a&apos;" id="org.eclipse.jdt.ui.rename.local.variable" input="/src&lt;jpt{Lab_2024311939.java[Lab_2024311939~Bin2Hex~QArrayList\&lt;QInteger;&gt;;@a!1197!1211!1201!1201!I!0!false" name="ch" references="true" stamp="1710152609540" version="1.0"/>
+</session>

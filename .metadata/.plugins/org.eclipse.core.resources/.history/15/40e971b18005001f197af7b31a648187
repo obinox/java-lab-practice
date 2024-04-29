@@ -1,0 +1,9 @@
+package jpt;
+
+public class Battleship {
+
+}
+
+abstract class ship {
+	
+}

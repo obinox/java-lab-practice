@@ -1,0 +1,79 @@
+package jpt;
+
+import java.util.Scanner;
+
+public class Battleship {
+	public static void main(String[] args) {
+		Scanner scn = new Scanner(System.in);
+		String buf;
+		try {
+			buf = scn.nextLine();
+			Methods.test();
+		} catch(BombInputException e) {
+			
+		} catch(ModeInputException e) {
+			
+		}
+		scn.close();
+	}
+	
+}
+
+class Methods{
+	public static void test() throws BombInputException, ModeInputException{
+		throw new BombInputException();
+	}
+}
+
+class BombInputException extends Exception {
+	public BombInputException() {
+		
+	}
+	public BombInputException(String message){
+		super(message);
+	}
+	
+}
+
+class ModeInputException extends Exception {
+	
+}
+
+abstract class ship {
+	int size=0;
+	String type="ship";
+	boolean hits=false;
+	public void Hit() {
+		this.hits = true;
+	}
+}
+class AircraftCarrier extends ship{
+	public AircraftCarrier() {
+		this.size = 6;
+		this.type = "carrier";
+	}
+}
+class BattleShip extends ship{
+	public BattleShip() {
+		this.size = 6;
+		this.type = "battleship";
+	}
+}
+class Submarine extends ship{
+	public Submarine() {
+		this.size = 6;
+		this.type = "submarine";
+	}
+}
+class Destroyer extends ship{
+	public Destroyer() {
+		this.size = 6;
+		this.type = "destroyer";
+	}
+}
+class PatrolBoat extends ship{
+	public PatrolBoat() {
+		this.size = 6;
+		this.type = "patrolboat";
+	}
+}

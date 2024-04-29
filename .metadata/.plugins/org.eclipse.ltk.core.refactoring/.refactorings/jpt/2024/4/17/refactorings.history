@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;jpt.SimpleCalculater&apos; to &apos;SimpleCalculator&apos;&#x0D;&#x0A;- Original project: &apos;jpt&apos;&#x0D;&#x0A;- Original element: &apos;jpt.SimpleCalculater&apos;&#x0D;&#x0A;- Renamed element: &apos;jpt.SimpleCalculator&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;SimpleCalculater&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;jpt{SimpleCalculater.java[SimpleCalculater" matchStrategy="1" name="SimpleCalculator" qualified="false" references="true" similarDeclarations="false" stamp="1713795644055" textual="false" version="1.0"/>
+</session>

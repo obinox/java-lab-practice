@@ -1,0 +1,44 @@
+package jpt;
+
+public class Battleship {
+
+}
+
+abstract class ship {
+	int size=0;
+	String type="ship";
+	boolean hits=false;
+	public void Hit() {
+		this.hits = true;
+	}
+}
+class AircraftCarrier extends ship{
+	public AircraftCarrier() {
+		this.size = 6;
+		this.type = "carrier";
+	}
+}
+class BattleShip extends ship{
+	public BattleShip() {
+		this.size = 6;
+		this.type = "battleship";
+	}
+}
+class Submarine extends ship{
+	public Submarine() {
+		this.size = 6;
+		this.type = "carrier";
+	}
+}
+class Destroyer extends ship{
+	public Destroyer() {
+		this.size = 6;
+		this.type = "carrier";
+	}
+}
+class PatrolBoat extends ship{
+	public PatrolBoat() {
+		this.size = 6;
+		this.type = "carrier";
+	}
+}

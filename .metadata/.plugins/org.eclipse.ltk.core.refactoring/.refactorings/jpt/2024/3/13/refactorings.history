@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename local variable &apos;disp&apos; in &apos;jpt.Hand.display()&apos; to &apos;disps&apos;&#x0D;&#x0A;- Original project: &apos;jpt&apos;&#x0D;&#x0A;- Original element: &apos;jpt.Hand.display().disp&apos;&#x0D;&#x0A;- Renamed element: &apos;disp&apos;&#x0D;&#x0A;- Update references to refactored element" description="Rename local variable &apos;disp&apos;" id="org.eclipse.jdt.ui.rename.local.variable" input="/src&lt;jpt{Blackjack.java[Hand~display@disp!3362!3400!3371!3374!\[QString;!0!false" name="disps" references="true" stamp="1711455617356" version="1.0"/>
+</session>

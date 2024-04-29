@@ -1,0 +1,39 @@
+package jpt;
+
+
+
+public class Library{
+	public Book[] Books;
+	Library(){  
+		Books = new Book[10];
+		for (int i=0;i<Books.length;i++) {
+			Books[i]=new Book();
+		}
+	}	
+	public static void main(String[] args) {
+		Library lib = new Library();
+		System.out.println(lib.Books[1].Borrowed);
+	}
+}
+class Book{
+	public boolean Borrowed;
+	Book(){
+		Borrowed = false;
+	}
+	public boolean borrowing(){
+		if (!this.Borrowed) {
+			this.Borrowed = true;
+			return true;
+		} else {
+			return false;
+		}	
+	}
+	public boolean returning(){
+		if (this.Borrowed) {
+			this.Borrowed = false;
+			return true;
+		} else {
+			return false;
+		}	
+	}
+}

@@ -1,0 +1,94 @@
+package jpt;
+import java.util.Random;
+
+public class Blackjack {
+	public static void main(String[] args) {
+		int seed = Integer.parseInt(args[0]);
+		int nplayer = Integer.parseInt(args[1]);
+		if (1>nplayer||nplayer>5) {
+			throw new IllegalArgumentException("The number of players ranges from 1 to 5");
+		}
+		Deck deck = new Deck();
+		deck.shuffle(seed);
+		
+		/* */
+	}
+}
+//enum Value {
+//	vA(1),v2(2),v3(3),v4(4),v5(5),v6(6),v7(7),v8(8),v9(9),
+//	v10(10),vJ(10),vQ(10),vK(10);
+//	private final int value;
+//	Value(int value) {
+//		this.value = value;
+//	}
+//}
+//enum Suit {
+//	ss(0),sh(1),sd(2),sc(3);
+//	private final int suit;
+//	Suit(int suit) {
+//		this.suit = suit;
+//	}
+//}
+class Card {
+	public int value, suit;
+	public String disp;
+	public Card(){}
+	public Card(int theValue, int theSuit) {
+		String v, s;
+		this.value = switch(theValue) {
+			case 1 -> 11; 
+			case 2,3,4,5,6,7,8,9,10 -> theValue;
+			case 11,12,13 -> 10;
+			default -> 0;
+		};
+		this.suit = theSuit;
+		v = switch(theValue) {
+			case 1 -> "A"; 
+			case 2,3,4,5,6,7,8,9,10 -> theValue+"";
+			case 11 -> "J";
+			case 12 -> "Q";
+			case 13 -> "K";
+			default -> "";
+		};
+		
+	}
+	//0:s 1:h 2:d 3:c
+}
+class Deck {
+	private Card[] deck;
+	private int cardsUsed;
+	
+	public void shuffle(int seed) {
+		Random random = new Random(seed);
+		for (int i=deck.length-1;i>0;i--) {
+			int rand = (int)(random.nextInt(i+1));
+			Card temp = deck[i];
+			deck[rand] = temp;
+		}
+		cardsUsed=0;
+	}
+	public Card dealCard() {
+		if (cardsUsed == deck.length) {
+			throw new IllegalStateException("No cards are left in the deck.");
+		}
+		cardsUsed++;
+		return deck[cardsUsed - 1];
+	}
+}
+class Hand {
+	public boolean canHit = true;
+	public void hit() {
+		
+	}
+	public void stand() { // or bust
+		this.canHit = false;
+	}
+}
+class Computer extends Hand {
+	Random random = new Random();
+	boolean is_hit=(random.nextInt(2)==1);
+		
+}
+class Player extends Hand {}
+class House extends Hand {}
+
